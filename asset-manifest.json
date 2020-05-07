@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/union-worksheet/static/css/main.d1b05096.chunk.css",
+    "main.js": "/union-worksheet/static/js/main.73196ad1.chunk.js",
+    "main.js.map": "/union-worksheet/static/js/main.73196ad1.chunk.js.map",
+    "runtime-main.js": "/union-worksheet/static/js/runtime-main.7ec475e2.js",
+    "runtime-main.js.map": "/union-worksheet/static/js/runtime-main.7ec475e2.js.map",
+    "static/js/2.75c3e41c.chunk.js": "/union-worksheet/static/js/2.75c3e41c.chunk.js",
+    "static/js/2.75c3e41c.chunk.js.map": "/union-worksheet/static/js/2.75c3e41c.chunk.js.map",
+    "index.html": "/union-worksheet/index.html",
+    "precache-manifest.87d34e6f7ead61e3b42efdd54a69657f.js": "/union-worksheet/precache-manifest.87d34e6f7ead61e3b42efdd54a69657f.js",
+    "service-worker.js": "/union-worksheet/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/union-worksheet/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.75c3e41c.chunk.js.LICENSE.txt": "/union-worksheet/static/js/2.75c3e41c.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/union-worksheet/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7ec475e2.js",
+    "static/js/2.75c3e41c.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.73196ad1.chunk.js"
+  ]
+}
