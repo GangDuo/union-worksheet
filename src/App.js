@@ -1,5 +1,6 @@
 import React from 'react';
 import FileUploadForm from './components/FileUploadForm.js'
+import manual from './manual.jpg';
 const XLSX = require('xlsx')
 
 function saveAs(data, filename) {
@@ -55,6 +56,11 @@ function makeJob(values) {
 
 function App() {
   return (
+  <>
+    <div style={{textAlign: "center"}}>
+      <div>エクセルを1つにまとめます。</div>
+      <img src={manual} />
+    </div>
     <FileUploadForm onSubmit={(values, { setSubmitting }) => {
       console.log(JSON.stringify(values, null, 2));
       return new Promise((resolve, reject) => {
@@ -69,6 +75,7 @@ function App() {
         return Promise.resolve(file)
       })
     }} />
+  </>
   );
 }
 
