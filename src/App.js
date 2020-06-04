@@ -1,6 +1,8 @@
 import React from 'react';
 import FileUploadForm from './components/FileUploadForm.js'
 const XLSX = require('xlsx')
+const unzip = require('unzip-stream');
+var http = require('http');
 
 function saveAs(data, filename) {
   const workbook = XLSX.utils.book_new()
@@ -40,16 +42,39 @@ function readXlsxAsJson(buf) {
 function makeJob(values) {
   return values.loadedFiles.map(file => {
     return new Promise((resolve, reject) => {
-      download(file, (err, response) => {
-        if(err) {
-          reject(err)
-          return
-        }
-        const sheet1AsJson = readXlsxAsJson(response)
-        console.log(sheet1AsJson);
-        resolve(sheet1AsJson)
+      console.log(file)
+      http.request(file, function(res) {
+        res.pipe(unzip.Parse())
+        .on('entry', function (entry) {
+          const filePath = entry.path;
+          console.log(filePath)
+        })
+        /*
+        .on('end', _=>{
+          console.log('end')
+          resolve({})
+        })
+        */
+      
       })
     })
+
+    if(file.path.endsWith('zip')) {
+      
+      
+    } else {
+      return new Promise((resolve, reject) => {
+        download(file, (err, response) => {
+          if(err) {
+            reject(err)
+            return
+          }
+          const sheet1AsJson = readXlsxAsJson(response)
+          console.log(sheet1AsJson);
+          resolve(sheet1AsJson)
+        })
+      })  
+    }
   })
 }
 
