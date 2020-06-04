@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field } from 'formik';
-import { Container, Button, LinearProgress } from '@material-ui/core';
+import { Container, Button, LinearProgress, FormControlLabel, Radio, Grid } from '@material-ui/core';
+import { RadioGroup, Switch } from 'formik-material-ui';
 import {DropzoneArea} from 'material-ui-dropzone'
 import Backdrop from '@material-ui/core/Backdrop';
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -16,15 +17,65 @@ const useStyles = makeStyles((theme) => ({
 function FileUploadForm({ onSubmit }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
+  const [toggle, setToggle] = React.useState(true);
+  const myRef = React.createRef();
+  
+  React.useEffect(() => {
+    console.log("addEventListener");
+    myRef.current.querySelector('input[name="hasHeader"]').addEventListener("change", () => {
+      console.log(toggle)
+      setToggle(!toggle)
+      console.log(toggle)
+    })
+
+    return function cleanup() {
+      console.log("cleanup");
+    };
+  });
 
   return (
     <Formik
-      initialValues={{}}      
+      initialValues={{
+      	direction: '有',
+        hasHeader: true,
+      }}      
       onSubmit={onSubmit}
     >
       {({ submitForm, isSubmitting, setFieldValue }) => (
         <Container maxWidth="sm">
         <Form>
+          <fieldset>
+            <legend>ヘッダ</legend>
+            <FormControlLabel
+              control={
+                <Field
+                  name="hasHeader"
+                  component={Switch}
+                  defaultChecked
+                  innerRef={myRef}
+                />
+              }
+              label="ヘッダあり"
+            />
+
+            <Field component={RadioGroup} name="direction">
+              <Grid
+                container
+                direction="row"
+                justify="center"
+                alignItems="flex-start"
+              >
+              {
+                ['無', '有']
+                .map((x, i) => <FormControlLabel key={i}
+                                                control={<Radio disabled={isSubmitting} />}
+                                                value={x}
+                                                label={x}
+                                                disabled={isSubmitting}/>)
+              }
+              </Grid>
+            </Field>
+          </fieldset>
           
           <fieldset>
             <legend>Excelファイル</legend>
