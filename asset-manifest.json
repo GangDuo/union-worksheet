@@ -1,22 +1,23 @@
 {
   "files": {
     "main.css": "/union-worksheet/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/union-worksheet/static/js/main.fe7cb015.chunk.js",
-    "main.js.map": "/union-worksheet/static/js/main.fe7cb015.chunk.js.map",
+    "main.js": "/union-worksheet/static/js/main.4cabacfd.chunk.js",
+    "main.js.map": "/union-worksheet/static/js/main.4cabacfd.chunk.js.map",
     "runtime-main.js": "/union-worksheet/static/js/runtime-main.7ec475e2.js",
     "runtime-main.js.map": "/union-worksheet/static/js/runtime-main.7ec475e2.js.map",
-    "static/js/2.7054ef92.chunk.js": "/union-worksheet/static/js/2.7054ef92.chunk.js",
-    "static/js/2.7054ef92.chunk.js.map": "/union-worksheet/static/js/2.7054ef92.chunk.js.map",
+    "static/js/2.d85b5f26.chunk.js": "/union-worksheet/static/js/2.d85b5f26.chunk.js",
+    "static/js/2.d85b5f26.chunk.js.map": "/union-worksheet/static/js/2.d85b5f26.chunk.js.map",
     "index.html": "/union-worksheet/index.html",
-    "precache-manifest.8dd3c7d8b7e805ae28497a0c1b8c9b87.js": "/union-worksheet/precache-manifest.8dd3c7d8b7e805ae28497a0c1b8c9b87.js",
+    "precache-manifest.2dcd4a563c68e8f5be955e0000500a23.js": "/union-worksheet/precache-manifest.2dcd4a563c68e8f5be955e0000500a23.js",
     "service-worker.js": "/union-worksheet/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/union-worksheet/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.7054ef92.chunk.js.LICENSE.txt": "/union-worksheet/static/js/2.7054ef92.chunk.js.LICENSE.txt"
+    "static/js/2.d85b5f26.chunk.js.LICENSE.txt": "/union-worksheet/static/js/2.d85b5f26.chunk.js.LICENSE.txt",
+    "static/media/manual.jpg": "/union-worksheet/static/media/manual.405eae79.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.7ec475e2.js",
-    "static/js/2.7054ef92.chunk.js",
+    "static/js/2.d85b5f26.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.fe7cb015.chunk.js"
+    "static/js/main.4cabacfd.chunk.js"
   ]
 }
