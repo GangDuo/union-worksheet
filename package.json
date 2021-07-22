@@ -15,7 +15,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "styled-jsx": "^3.3.0",
-    "xlsx": "^0.16.0",
+    "xlsx": "^0.17.0",
     "yup": "^0.28.5"
   },
   "scripts": {
